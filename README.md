@@ -28,6 +28,7 @@ Versioning is done with a [version file](version.txt). The lines work as this:
 This is not tested as the GitHub Cli doesn't work on my machine.
 
 ```bash
+pacman -S git
 gh clone quiode/DARCH
 cd DARCH/scripts/main
 chmod +x get.sh install.sh set.sh
@@ -37,6 +38,7 @@ chmod +x get.sh install.sh set.sh
 ## Using [Git](https://git-scm.com/)
 
 ```bash
+pacman -S github-cli
 git clone https://github.com/quiode/DARCH
 cd DARCH/scripts/main
 chmod +x get.sh install.sh set.sh
