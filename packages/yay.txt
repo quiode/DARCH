@@ -1,2 +1,4 @@
 git
 github-cli
+zsh
+zsh-syntax-highlighting
