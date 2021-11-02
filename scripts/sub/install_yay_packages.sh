@@ -7,5 +7,5 @@ SCRIPT_DIR=$SCRIPT_DIR"/../../"
 # Variables
 unalias cp
 
-filepath=$SCRIPT_DIR"/packages/yay.txt"
-xargs yay -S <"$filepath"
+cd "$SCRIPT_DIR"/packages/ || exit
+xargs -a yay.txt yay -S
