@@ -28,30 +28,29 @@ Versioning is done with a [version file](version.txt). The lines work as this:
 This is not tested as the GitHub Cli doesn't work on my machine.
 
 ```bash
-pacman -S git
+pacman -S --needed git base-devel
 gh clone quiode/DARCH
 cd DARCH/scripts/main
-chmod +x get.sh install.sh set.sh
+chmod +x update.sh install.sh
 ./install.sh
 ```
 
 ## Using [Git](https://git-scm.com/)
 
 ```bash
-pacman -S github-cli
+pacman -S --needed github-cli base-devel
 git clone https://github.com/quiode/DARCH
 cd DARCH/scripts/main
-chmod +x get.sh install.sh set.sh
+chmod +x update.sh install.sh
 ./install.sh
 ```
 
 # Usage
 
 - Install the dotfiles with [install](./scripts/main/install.sh).
-- Update the dotfiles on the system with the files in the repository with [update](./scripts/main/set.sh).
-- Update the dotfiles in the repository with the files in the system with [update](./scripts/main/get.sh).
-- After an installation, you can use the [DARCH]() script to update, install or set the dotfiles.
+- Update the system with [update](./scripts/main/update.sh).
+- After an installation, you can use the [DARCH]() script to update and install the dotfiles.
 
 ```
-$ DARCH [install|update|set|--help]
+$ DARCH [install|update|--help]
 ```
