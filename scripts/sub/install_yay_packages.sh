@@ -8,7 +8,7 @@ SCRIPT_DIR=$SCRIPT_DIR"/../../"
 unalias cp
 
 # checks if yay exists
-if command -v yay &>/dev/null; then
+if ! command -v yay &>/dev/null; then
     bash "$SCRIPT_DIR"/scripts/sub/yay_setup.sh
 fi
 
