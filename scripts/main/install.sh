@@ -8,7 +8,9 @@ SCRIPT_DIR=$SCRIPT_DIR"/../../"
 unalias cp
 
 # YAY
-bash "$SCRIPT_DIR"/scripts/sub/yay_setup.sh
+if command -v yay &>/dev/null; then
+    bash "$SCRIPT_DIR"/scripts/sub/yay_setup.sh
+fi
 
 # Install Packages
 bash "$SCRIPT_DIR"/scripts/sub/install_yay_packages.sh

@@ -7,5 +7,10 @@ SCRIPT_DIR=$SCRIPT_DIR"/../../"
 # Variables
 unalias cp
 
+# checks if yay exists
+if command -v yay &>/dev/null; then
+    bash "$SCRIPT_DIR"/scripts/sub/yay_setup.sh
+fi
+
 cd "$SCRIPT_DIR"/packages/ || exit
 xargs -a yay.txt yay -S
