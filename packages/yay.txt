@@ -19,11 +19,12 @@ kompare
 kdegraphics-thumbnailers
 kimageformats
 qt5-imageformats
-resvgAUR
+resvg
 kdesdk-thumbnailers
 ffmpegthumbs
 raw-thumbnailer
 taglib
-kde-thumbnailer-apkAUR
+kde-thumbnailer-apk
 audiocd-kio
 unzip
+awesome
