@@ -104,3 +104,4 @@ alias v=nvim
 
 # Syntax highlighting
 source /home/quio/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+neofetch
