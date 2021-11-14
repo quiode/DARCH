@@ -4,8 +4,6 @@
 # Constants
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 SCRIPT_DIR=$SCRIPT_DIR"/../../"
-# Variables
-unalias cp
 
 # Pacman keys
 pacman-key --populate archlinux
