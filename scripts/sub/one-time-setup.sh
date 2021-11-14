@@ -29,3 +29,6 @@ if [ -d "$HOME"/zsh-syntax-highlighting/ ]; then
     git pull
 fi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+# systemctl
+sudo systemctl enable ntpd.service
