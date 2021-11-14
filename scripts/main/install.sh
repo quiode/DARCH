@@ -7,6 +7,9 @@ SCRIPT_DIR=$SCRIPT_DIR"/../../"
 # Variables
 unalias cp
 
+# Pacman keys
+pacman-key --populate archlinux
+
 # YAY
 if ! command -v yay &>/dev/null; then
     bash "$SCRIPT_DIR"/scripts/sub/yay_setup.sh
