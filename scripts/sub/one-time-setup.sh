@@ -30,4 +30,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # systemctl
 sudo systemctl enable ntpd.service
-sudo systemctl start sddm.service
+sudo systemctl enable sddm.service
