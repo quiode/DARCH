@@ -6,7 +6,8 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 SCRIPT_DIR=$SCRIPT_DIR"/../../"
 
 # Pacman keys
-pacman-key --populate archlinux
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
 
 # YAY
 if ! command -v yay &>/dev/null; then
