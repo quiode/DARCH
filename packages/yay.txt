@@ -31,3 +31,4 @@ awesome
 ntp
 sddm
 neofetch
+htop
