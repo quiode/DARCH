@@ -28,6 +28,9 @@ if [ -d "$HOME"/zsh-syntax-highlighting/ ]; then
 fi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
+# keyboard layout
+localectl set-x11-keymap ch
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
