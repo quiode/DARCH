@@ -35,7 +35,9 @@ localectl set-x11-keymap ch
 cd "$HOME" || exit
 git clone https://github.com/dracula/grub.git
 sudo cp -r grub/dracula /usr/share/grub/themes/
-# TODO: set grup config to use dracula theme
+sudo rm -r grub
+cd "$SCRIPT_DIR" || exit
+sudo cp -r configs/grub/grub /etc/default/
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # systemctl
