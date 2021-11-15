@@ -30,3 +30,4 @@ unzip
 awesome
 ntp
 sddm
+neofetch
