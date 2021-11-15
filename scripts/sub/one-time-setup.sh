@@ -31,6 +31,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 # keyboard layout
 localectl set-x11-keymap ch
 
+# Dracula Grub Theme
+cd "$HOME" || exit
+git clone https://github.com/dracula/grub.git
+sudo cp -r grub/dracula /usr/share/grub/themes/
+# TODO: set grup config to use dracula theme
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
