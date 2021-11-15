@@ -9,3 +9,6 @@ unalias cp
 
 # ZSH
 cp -r "$SCRIPT_DIR"/configs/zsh/.zshrc "$HOME"/
+
+# Locale
+sudo cp -r "$SCRIPT_DIR"/configs/locale/locale.conf /etc/
