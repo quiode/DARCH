@@ -32,3 +32,4 @@ ntp
 sddm
 neofetch
 htop
+gtk4
