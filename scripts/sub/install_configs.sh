@@ -13,3 +13,8 @@ cp -r "$SCRIPT_DIR"/configs/zsh/.zshrc "$HOME"/
 # Locale
 sudo cp -r "$SCRIPT_DIR"/configs/locale/locale.conf /etc/
 sudo locale-gen
+
+# Grub
+cd "$SCRIPT_DIR" || exit
+sudo cp -r "$SCRIPT_DIR"/configs/grub/grub /etc/default/
+sudo grub-mkconfig -o /boot/grub/grub.cfg
