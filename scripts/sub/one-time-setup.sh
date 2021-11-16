@@ -41,7 +41,7 @@ sudo rm -r grub
 cd "$HOME" || exit
 git clone https://github.com/dracula/tilix.git
 mkdir -p "$HOME"/.config/tilix/schemes/
-cp -r tilix/dracula.json "$HOME"/.config/tilix/schemes/
+cp -r tilix/Dracula.json "$HOME"/.config/tilix/schemes/
 sudo rm -r tilix
 
 # systemctl
