@@ -37,6 +37,13 @@ git clone https://github.com/dracula/grub.git
 sudo cp -r grub/dracula /usr/share/grub/themes/
 sudo rm -r grub
 
+# Tilix Theme
+cd "$HOME" || exit
+git clone https://github.com/dracula/tilix.git
+mkdir -p "$HOME"/.config/tilix/schemes/
+cp -r tilix/dracula.json "$HOME"/.config/tilix/schemes/
+sudo rm -r tilix
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
