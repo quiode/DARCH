@@ -33,3 +33,4 @@ sddm
 neofetch
 htop
 gtk4
+nextcloud-client
