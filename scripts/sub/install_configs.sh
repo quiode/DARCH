@@ -18,3 +18,7 @@ sudo locale-gen
 cd "$SCRIPT_DIR" || exit
 sudo cp -r "$SCRIPT_DIR"/configs/grub/grub /etc/default/
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# Alacritty
+cd "$SCRIPT_DIR" || exit
+sudo cp -r "$SCRIPT_DIR"/configs/alacritty "$HOME"/.config/alacritty/

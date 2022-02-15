@@ -12,7 +12,6 @@ xorg
 xorg-xinit
 nitrogen
 picom
-tilix
 dolphin
 dolphin-plugins
 kompare
@@ -34,3 +33,4 @@ neofetch
 htop
 gtk4
 nextcloud-client
+alacritty
