@@ -22,3 +22,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # Alacritty
 cd "$SCRIPT_DIR" || exit
 sudo cp -r "$SCRIPT_DIR"/configs/alacritty/alacritty.yml "$HOME"/.config/alacritty/
+
+# Awesome
+cd "$SCRIPT_DIR" || exit
+sudo cp -r "$SCRIPT_DIR"/configs/awesome "$HOME"/.config/

@@ -44,6 +44,22 @@ mkdir -p .config/alacritty
 mv alacritty/dracula.yml .config/alacritty/
 sudo rm -r alacritty
 
+# Fonts
+cd "$HOME" || exit
+mkdir -p .fonts
+cp "$SCRIPT_DIR"/fonts/* .fonts/
+fc-cache -v # for detecting fonts
+
+# Spotify-Tui
+spt
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
+
+# For automatically launching mpd on login
+systemctl --user enable mpd.service
+systemctl --user start mpd.service
+# For charger plug/unplug events (if you have a battery)
+sudo systemctl enable acpid.service
+sudo systemctl start acpid.service
