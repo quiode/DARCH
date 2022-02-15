@@ -59,7 +59,5 @@ sudo systemctl enable sddm.service
 
 # For automatically launching mpd on login
 systemctl --user enable mpd.service
-systemctl --user start mpd.service
 # For charger plug/unplug events (if you have a battery)
 sudo systemctl enable acpid.service
-sudo systemctl start acpid.service
