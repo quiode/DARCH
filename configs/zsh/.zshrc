@@ -104,6 +104,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias v=nvim
+alias ll=ls -ls
 
 # Syntax highlighting
 source /home/quio/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
