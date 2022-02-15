@@ -82,7 +82,7 @@ user = {
     file_manager = "nautilus",
     editor = "nvim",
     email_client = "thunderbird",
-    music_client = "spotify",
+    music_client = "spot",
 
     -- >> Web Search <<
     web_search_cmd = "xdg-open https://ecosia.com/?q=",

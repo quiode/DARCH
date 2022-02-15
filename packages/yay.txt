@@ -51,3 +51,4 @@ xdotool
 thunderbird
 snapd
 mpv
+spot-client
