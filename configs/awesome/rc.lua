@@ -76,16 +76,16 @@ local exit_screen_theme = exit_screen_themes[2]
 user = {
     -- >> Default applications <<
     -- Check apps.lua for more
-    terminal = "kitty -1",
-    floating_terminal = "kitty -1",
+    terminal = "alacritty",
+    floating_terminal = "alacritty",
     browser = "firefox",
-    file_manager = "kitty -1 --class files -e ranger",
-    editor = "kitty -1 --class editor -e vim",
-    email_client = "kitty -1 --class email -e neomutt",
-    music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
+    file_manager = "nautilus",
+    editor = "nvim",
+    email_client = "thunderbird",
+    music_client = "spotify",
 
     -- >> Web Search <<
-    web_search_cmd = "xdg-open https://duckduckgo.com/?q=",
+    web_search_cmd = "xdg-open https://ecosia.com/?q=",
     -- web_search_cmd = "xdg-open https://www.google.com/search?q=",
 
     -- >> User profile <<
@@ -127,15 +127,15 @@ user = {
     -- Get your key and find your city id at
     -- https://openweathermap.org/
     -- (You will need to make an account!)
-    openweathermap_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    openweathermap_city_id = "yyyyyy",
+    openweathermap_key = "22002313e79386f1c998ee6deb2f45d2",
+    openweathermap_city_id = "2660194",
     -- > Use "metric" for Celcius, "imperial" for Fahrenheit
     weather_units = "metric",
 
     -- >> Coronavirus <<
     -- Country to check for corona statistics
     -- Uses the https://corona-stats.online API
-    coronavirus_country = "germany",
+    coronavirus_country = "switzerland",
 }
 -- ===================================================================
 
