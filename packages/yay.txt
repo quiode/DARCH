@@ -12,8 +12,7 @@ xorg
 xorg-xinit
 nitrogen
 picom
-dolphin
-dolphin-plugins
+nautilus
 kompare
 kdegraphics-thumbnailers
 kimageformats
