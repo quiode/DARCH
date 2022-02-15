@@ -25,3 +25,6 @@ bash "$SCRIPT_DIR"/scripts/sub/one-time-setup.sh
 
 # Install Configs
 bash "$SCRIPT_DIR"/scripts/sub/install_configs.sh
+
+# After Install script
+bash "$SCRIPT_DIR"/scripts/sub/after_install.sh
