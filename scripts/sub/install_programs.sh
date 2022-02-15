@@ -5,6 +5,6 @@
 cd "$HOME" || exit
 
 git clone https://github.com/quiode/scripts
-sudo chmod +x scripts/scripts/system-update/update-package-managers.sh
-sudo mv scripts/scripts/system-update/update-package-managers.sh /opt
+sudo chmod +x scripts/scripts/system-update/update-package-managers
+sudo mv scripts/scripts/system-update/update-package-managers /opt
 sudo rm -r scripts # cleanup
