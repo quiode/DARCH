@@ -48,3 +48,5 @@ light-git
 pulseaudio
 inotify-tools
 xdotool
+thunderbird
+snapd
