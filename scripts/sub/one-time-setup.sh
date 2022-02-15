@@ -42,6 +42,7 @@ cd "$HOME" || exit
 git clone https://github.com/dracula/alacritty
 mkdir -p .config/alacritty
 mv alacritty/dracula.yml .config/alacritty/
+sudo rm -r alacritty
 
 # systemctl
 sudo systemctl enable ntpd.service
