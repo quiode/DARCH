@@ -26,3 +26,4 @@ mpv
 thunderbird
 snapd
 flatpak
+spotify

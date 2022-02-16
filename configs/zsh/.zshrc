@@ -103,8 +103,9 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias v=nvim
-alias ll=ls -la
+alias v="nvim"
+alias ll="ls -la"
+alias spotnz="spotify --no-zygote"
 
 # Syntax highlighting
 source /home/quio/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
