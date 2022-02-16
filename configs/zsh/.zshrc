@@ -105,7 +105,7 @@ export EDITOR='vim'
 
 alias v="nvim"
 alias ll="ls -la"
-alias spotnz="spotify --no-zygote"
+alias spotify="spotify --no-zygote"
 
 # Syntax highlighting
 source /home/quio/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
