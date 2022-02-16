@@ -47,3 +47,4 @@ sudo rm -r alacritty
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
+sudo systemctl enable snapd

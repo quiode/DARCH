@@ -35,3 +35,5 @@ gtk4
 nextcloud-client
 alacritty
 mpv
+thunderbird
+snapd
