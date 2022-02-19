@@ -1,0 +1,4 @@
+#!/bin/bash
+# Background Image
+nitrogen --restore &
+nitrogen --random --set-scaled ~/Pictures/Background/

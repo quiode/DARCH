@@ -44,6 +44,10 @@ mkdir -p .config/alacritty
 mv alacritty/dracula.yml .config/alacritty/
 sudo rm -r alacritty
 
+# Background image
+mkdir -p "$HOME"/Pictures/Background/
+cp -r "$SCRIPT_DIR"/images/background1.jpg "$HOME"/Pictures/Background/
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
