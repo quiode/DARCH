@@ -12,7 +12,7 @@
 
 # Introduction
 
-This repository is meant to easly setup a new Computer with my personal settings. It is meant to first cleanly install the [OS](https://anarchyinstaller.gitlab.io/) and then directely run the script. It is meant to just cleanly install Arch Linux and then run the script. The script then install the needed packages.
+This repository is meant to easly setup a new Computer with my personal settings. It is meant to first cleanly install the [OS](https://anarchyinstaller.gitlab.io/) and then directely run the script. It is meant to just cleanly install Arch Linux and then run the script. The script then installs the needed packages.
 
 Versioning is done with a [version file](version.txt). The lines work as this:
 
