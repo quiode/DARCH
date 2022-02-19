@@ -26,3 +26,7 @@ sudo cp -r "$SCRIPT_DIR"/configs/alacritty/alacritty.yml "$HOME"/.config/alacrit
 # XORG
 cd "$SCRIPT_DIR" || exit
 sudo cp -r "$SCRIPT_DIR"/configs/xorg/.xprofile "$HOME"/
+
+# Awesome
+cd "$SCRIPT_DIR" || exit
+sudo cp -r "$SCRIPT_DIR"/configs/awesome "$HOME"/.config/
