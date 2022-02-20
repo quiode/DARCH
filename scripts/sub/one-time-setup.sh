@@ -51,6 +51,24 @@ sudo rm -r alacritty
 mkdir -p "$HOME"/Pictures/Background/
 cp -r "$SCRIPT_DIR"/images/ "$HOME"/Pictures/Background/
 
+# GTK Dracula Theme
+cd "$HOME" || exit
+wget https://github.com/dracula/gtk/archive/master.zip
+unzip master.zip
+sudo rm -r master.zip
+mv gtk-master Dracula
+sudo mv Dracula /usr/share/themes/
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+
+# GTK Dracula Icons
+cd "$HOME" || exit
+wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
+unzip Dracula.zip
+sudo rm -r Dracula.zip
+sudo mv Dracula /usr/share/icons/
+gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
