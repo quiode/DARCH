@@ -29,4 +29,5 @@ sudo cp -r "$SCRIPT_DIR"/configs/xorg/.xprofile "$HOME"/
 
 # Awesome
 cd "$SCRIPT_DIR" || exit
+sudo chmod +x "$SCRIPT_DIR"/configs/awesome/autorun.sh
 sudo cp -r "$SCRIPT_DIR"/configs/awesome "$HOME"/.config/
