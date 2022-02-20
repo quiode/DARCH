@@ -74,7 +74,7 @@ wget https://github.com/dracula/qt5/archive/master.zip
 unzip master.zip
 sudo rm -r master.zip
 mkdir -p /usr/share/qt5ct/colors
-mv qt5-master/Dracula.conf /usr/share/qt5ct/colors
+sudo mv qt5-master/Dracula.conf /usr/share/qt5ct/colors/
 sudo rm -r qt5-master
 
 # systemctl
