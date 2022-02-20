@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script installs all packages and configfiles, removes old config filesset
+# This script installs all packages and configfiles, removes old config files
 
 # Constants
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
