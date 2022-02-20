@@ -27,3 +27,6 @@ thunderbird
 snapd
 flatpak
 spotify
+qt5ct
+qt5-base
+qt5-doc

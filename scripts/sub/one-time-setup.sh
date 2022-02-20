@@ -69,6 +69,12 @@ sudo rm -r Dracula.zip
 sudo mv Dracula /usr/share/icons/
 gsettings set org.gnome.desktop.interface icon-theme "Dracula"
 
+# Qt Dracula Theme
+wget https://github.com/dracula/qt5/archive/master.zip
+unzip master.zip
+mkdir -p /usr/share/qt5ct/colors
+mv qt5-master/Dracula.conf /usr/share/qt5ct/colors
+
 # systemctl
 sudo systemctl enable ntpd.service
 sudo systemctl enable sddm.service
