@@ -1,5 +1,8 @@
 #!/bin/bash
 # one time setup, has to be run once and then never again, but doesn't break stuff if run multiple times
+# Constants
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+SCRIPT_DIR=$SCRIPT_DIR"/../../"
 # use zsh terminal
 sudo chsh -s /bin/zsh root
 sudo chsh -s /bin/zsh "$USER"
@@ -46,7 +49,7 @@ sudo rm -r alacritty
 
 # Background image
 mkdir -p "$HOME"/Pictures/Background/
-cp -r "$SCRIPT_DIR"/images/background1.jpg "$HOME"/Pictures/Background/
+cp -r "$SCRIPT_DIR"/images/ "$HOME"/Pictures/Background/
 
 # systemctl
 sudo systemctl enable ntpd.service
