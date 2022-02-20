@@ -7,4 +7,3 @@ function run {
 }
 
 run nitrogen --random --set-scaled ~/Pictures/Background/
-export QT_QPA_PLATFORMTHEME=qt5ct

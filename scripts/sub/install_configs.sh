@@ -32,6 +32,10 @@ cd "$SCRIPT_DIR" || exit
 sudo chmod +x "$SCRIPT_DIR"/configs/awesome/autorun.sh
 sudo cp -r "$SCRIPT_DIR"/configs/awesome "$HOME"/.config/
 
-# Qt5
+# # Qt5
+# cd "$SCRIPT_DIR" || exit
+# sudo cp -r "$SCRIPT_DIR"/configs/qt5ct "$HOME"/.config/
+
+# .profile
 cd "$SCRIPT_DIR" || exit
-sudo cp -r "$SCRIPT_DIR"/configs/qt5ct "$HOME"/.config/
+sudo cp -r "$SCRIPT_DIR"/configs/.profile "$HOME"/
