@@ -8,7 +8,7 @@ arch=("x86_64")
 url="https://github.com/quiode/DARCH"
 license=('MIT')
 groups=()
-depends=()
+depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam')
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -21,7 +21,7 @@ install=
 changelog=
 source=("yay.txt")
 noextract=()
-sha512sums=("b188c087e6e4c9f04ec420126456b8deffa97eeba0675552fe0160d6122c233f14248d8b547795b753a0841ff3eddd063e91c8cd2cb28f869920587257b4fd2e")
+sha512sums=("915dbf0c819bfcfacbf14da184ebbb0d11cd6ec54bae339068a6af3ca947249b6b66df268b52c0e2d0bb9b1df64fe8c9a4e3934b72fe970917623f09da4418c1")
 validpgpkeys=()
 
 # prepare() {
@@ -44,5 +44,13 @@ check() {
 
 package() {
 	cd "$srcdir" || exit
+	# Installs aur packages
 	xargs -a yay.txt yay -S --noconfirm
+
+	# Teams fix (https://aur.archlinux.org/packages/teams)
+	mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/applications"
+	cp -a "/usr/share/applications/teams.desktop" \
+		"${XDG_DATA_HOME:-$HOME/.local/share}/applications/teams.desktop"
+	sed -i -e 's,teams %U,teams --disable-seccomp-filter-sandbox %U,' \
+		"${XDG_DATA_HOME:-$HOME/.local/share}/applications/teams.desktop"
 }

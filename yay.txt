@@ -1,2 +1,4 @@
 spotify
 spotifyd
+github-desktop-bin
+teams
