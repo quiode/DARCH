@@ -3,3 +3,4 @@ spotifyd
 github-desktop-bin
 teams
 spotify-tui
+drawio-desktop
