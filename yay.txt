@@ -8,3 +8,4 @@ drawio-desktop
 snowflake
 write_stylus
 zotero
+nvm
