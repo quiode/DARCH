@@ -50,11 +50,14 @@ package() {
 	# Installs aur packages
 	xargs -a yay.txt yay -S --noconfirm
 
+	# add flatpak remote
+	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 	# Installs flatpak packages
-	xargs -a yay.txt flatpak install -y
+	xargs -a flatpak.txt flatpak install -y
 
 	# Installs snap packages
-	xargs -a yay.txt snap install -y
+	xargs -a snap.txt snap install
 
 	# Teams fix (https://aur.archlinux.org/packages/teams)
 	mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/applications"

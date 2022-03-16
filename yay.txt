@@ -3,7 +3,8 @@ spotifyd
 github-desktop-bin
 teams
 spotify-tui
-drawio-desktop-bin
+joplin-desktop
+drawio-desktop
 snowflake
 write_stylus
 zotero
