@@ -19,7 +19,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("yay.txt" "flatpak.txt" "snap.txt")
+source=("yay.txt" "flatpak.txt" "snap.txt" "DARCH")
 noextract=()
 sha512sums=("SKIP" "SKIP" "SKIP")
 validpgpkeys=()
@@ -47,40 +47,14 @@ check() {
 }
 
 package() {
-	# Installs aur packages
-	xargs -r -a yay.txt yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000
-
-	# add flatpak remote
-	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-	# Installs flatpak packages
-	xargs -r -a flatpak.txt flatpak install -y
-
-	# Installs snap packages
-	xargs -r -a snap.txt snap install
-
-	# Teams fix (https://aur.archlinux.org/packages/teams)
-	mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/applications"
-	cp -a "/usr/share/applications/teams.desktop" \
-		"${XDG_DATA_HOME:-$HOME/.local/share}/applications/teams.desktop"
-	sed -i -e 's,teams %U,teams --disable-seccomp-filter-sandbox %U,' \
-		"${XDG_DATA_HOME:-$HOME/.local/share}/applications/teams.desktop"
-
-	# qBittorrent theme
-	wget https://github.com/dracula/qbittorrent/raw/master/qbittorrent.qbtheme
-	if [ ! -d "/home/$USER/.config/qBittorrent" ]; then
-		mkdir -p /home/"$USER"/.config/qBittorrent
-	fi
-	mv qbittorrent.qbtheme /home/"$USER"/.config/qBittorrent/
-
-	# LibreOffice Theme
-	git clone https://github.com/dracula/libreoffice.git
-	cd libreoffice || exit
-	if [ ! -d "/home/"$USER"/.config/libreoffice/4/user/config/" ]; then
-		mkdir -p /home/"$USER"/.config/libreoffice/4/user/config/
-	fi
-	cp dracula.soc /home/"$USER"/.config/libreoffice/4/user/config/
-	# bash install.sh
-	cd ../
-	rm -rf libreoffice
+	cd $srcdir
+	mkdir -p "$pkgdir/usr/bin"
+	mkdir -p "$pkgdir/usr/share/darch"
+	cp -a $srcdir/DARCH "$pkgdir/usr/bin/"
+	cp -a $srcdir/yay.txt "$pkgdir/usr/share/darch/"
+	cp -a $srcdir/flatpak.txt "$pkgdir/usr/share/darch/"
+	cp -a $srcdir/snap.txt "$pkgdir/usr/share/darch/"
+	RED='\033[0;31m'
+	NC='\033[0m' # No Color
+	echo -e "${RED}Use command Darch to finish the install!${NC}"
 }
