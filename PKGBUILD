@@ -47,14 +47,8 @@ check() {
 }
 
 package() {
-	useradd -m yayuser
-	su yayuser
-
 	# Installs aur packages
 	xargs -r -a yay.txt yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000
-
-	exit
-	userdel yayuser
 
 	# add flatpak remote
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
