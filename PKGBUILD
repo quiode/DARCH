@@ -21,7 +21,7 @@ install=
 changelog=
 source=("yay.txt")
 noextract=()
-sha512sums=()
+sha512sums=("3d88a9005512ae92789e6a007436ec848c9615e3fd0f150827554cf829632fb6")
 validpgpkeys=()
 
 # prepare() {
