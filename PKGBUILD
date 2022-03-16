@@ -21,7 +21,7 @@ install=
 changelog=
 source=("yay.txt" "flatpak.txt" "snap.txt" "DARCH")
 noextract=()
-sha512sums=("SKIP" "SKIP" "SKIP")
+sha512sums=("SKIP" "SKIP" "SKIP" "SKIP")
 validpgpkeys=()
 
 # prepare() {
