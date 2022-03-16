@@ -6,7 +6,6 @@
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Usage](#usage)
 
 # Introduction
 
@@ -15,8 +14,13 @@ This repository is meant to easily setup a new computer with my personal setting
 # Installation
 
 <!-- AS AUR PACKAGE OR JUST PACKAGE STANDALONE https://wiki.archlinux.org/title/Creating_packages -->
-<!-- TODO -->
 
-# Usage
-
-<!-- TODO -->
+```bash
+yay
+yay -S snapd
+*restart*
+git clone https://github.com/quiode/DARCH
+cd DARCH
+makepkg -si
+DARCH
+```
