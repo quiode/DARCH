@@ -48,7 +48,16 @@ check() {
 
 package() {
 	# Installs aur packages
-	yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000 spotify spotifyd github-desktop-bin teams spotify-tui joplin-desktop drawio-desktop snowflake write_stylus zotero
+	yay -S -y --noconfirm spotify
+	yay -S -y --noconfirm spotifyd
+	yay -S -y --noconfirm github-desktop-bin
+	yay -S -y --noconfirm teams
+	yay -S -y --noconfirm spotify-tui
+	yay -S -y --noconfirm joplin-desktop
+	yay -S -y --noconfirm drawio-desktop
+	yay -S -y --noconfirm snowflake
+	yay -S -y --noconfirm write_stylus
+	yay -S -y --noconfirm zotero
 
 	# add flatpak remote
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
