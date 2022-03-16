@@ -45,4 +45,5 @@ check() {
 package() {
 	cd "$srcdir" || exit
 	xargs -a yay.txt yay -S --noconfirm
+	touch $HOME/test.txt
 }
