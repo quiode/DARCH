@@ -5,3 +5,6 @@ teams
 spotify-tui
 drawio-desktop
 joplin-desktop
+snowflake
+write_stylus
+zotero

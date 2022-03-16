@@ -8,7 +8,7 @@ arch=("x86_64")
 url="https://github.com/quiode/DARCH"
 license=('MIT')
 groups=()
-depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam' 'virtualbox' 'python-pip' 'signal-desktop' 'telegram-desktop')
+depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam' 'virtualbox' 'python-pip' 'signal-desktop' 'telegram-desktop' 'qbittorrent' 'converseen' 'inkscape' 'gimp' 'geogebra')
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -21,7 +21,7 @@ install=
 changelog=
 source=("yay.txt")
 noextract=()
-sha512sums=("d8d85539c65777b2eef08fec98ce271b708432b6d1f510928d04a05e5fd6cea52490fe256d19e442213d9471862ed0b0520d287041ad09c0888e579d8d65c21c")
+sha512sums=("9589814f6eb6324266f7efed80fa770fdb25a5646e82c3c26c1c08fdbd2e95db6c4b402f0bc32910a4dcd9ce2f4ebb25422a70f1807a86d77afbe952ae90c45e")
 validpgpkeys=()
 
 # prepare() {
@@ -43,7 +43,6 @@ check() {
 }
 
 package() {
-	cd "$srcdir" || exit
 	# Installs aur packages
 	xargs -a yay.txt yay -S --noconfirm
 
@@ -53,4 +52,20 @@ package() {
 		"${XDG_DATA_HOME:-$HOME/.local/share}/applications/teams.desktop"
 	sed -i -e 's,teams %U,teams --disable-seccomp-filter-sandbox %U,' \
 		"${XDG_DATA_HOME:-$HOME/.local/share}/applications/teams.desktop"
+
+	# qBittorrent theme
+	wget https://github.com/dracula/qbittorrent/raw/master/qbittorrent.qbtheme
+	if [ ! -d "/home/$USER/.config/qBittorrent" ]; then
+		mkdir -p /home/"$USER"/.config/qBittorrent
+	fi
+	mv qbittorrent.qbtheme /home/"$USER"/.config/qBittorrent/
+
+	# LibreOffice Theme
+	git clone https://github.com/dracula/libreoffice.git
+	cd libreoffice || exit
+	if [ ! -d "/home/"$USER"/.config/libreoffice/4/user/config/" ]; then
+		mkdir -p /home/"$USER"/.config/libreoffice/4/user/config/
+	fi
+	cp dracula.soc /home/"$USER"/.config/libreoffice/4/user/config/
+	bash add_dracula_application_colors.sh
 }
