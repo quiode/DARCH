@@ -48,16 +48,16 @@ check() {
 
 package() {
 	# Installs aur packages
-	yay -S -y --noconfirm spotify
-	yay -S -y --noconfirm spotifyd
-	yay -S -y --noconfirm github-desktop-bin
-	yay -S -y --noconfirm teams
-	yay -S -y --noconfirm spotify-tui
-	yay -S -y --noconfirm joplin-desktop
-	yay -S -y --noconfirm drawio-desktop
-	yay -S -y --noconfirm snowflake
-	yay -S -y --noconfirm write_stylus
-	yay -S -y --noconfirm zotero
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu spotify
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu spotifyd
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu github-desktop-bin
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu teams
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu spotify-tui
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu joplin-desktop
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu drawio-desktop
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu snowflake
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu write_stylus
+	yay -S -y --noconfirm --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu zotero
 
 	# add flatpak remote
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
