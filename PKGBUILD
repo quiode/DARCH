@@ -54,7 +54,5 @@ package() {
 	cp -a $srcdir/yay.txt "$pkgdir/usr/share/darch/"
 	cp -a $srcdir/flatpak.txt "$pkgdir/usr/share/darch/"
 	cp -a $srcdir/snap.txt "$pkgdir/usr/share/darch/"
-	RED='\033[0;31m'
-	NC='\033[0m' # No Color
-	echo -e "${RED}Use command Darch to finish the install!${NC}"
+	echo -e "\033[0;31mUse command Darch to finish the install!"
 }
