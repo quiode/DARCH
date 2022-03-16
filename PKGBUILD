@@ -8,7 +8,7 @@ arch=("x86_64")
 url="https://github.com/quiode/DARCH"
 license=('MIT')
 groups=()
-depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam' 'virtualbox' 'python-pip')
+depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam' 'virtualbox' 'python-pip' 'signal-desktop' 'telegram-desktop')
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -21,7 +21,7 @@ install=
 changelog=
 source=("yay.txt")
 noextract=()
-sha512sums=("a4a79325c5cdcafd3e58d26b017dda654cf843ffb9a129ea3648908d1b9234b8a243f79fc327fe9d023fc1d363673bd8d72e40586c0c99502f5dcc38a7978b51")
+sha512sums=("d8d85539c65777b2eef08fec98ce271b708432b6d1f510928d04a05e5fd6cea52490fe256d19e442213d9471862ed0b0520d287041ad09c0888e579d8d65c21c")
 validpgpkeys=()
 
 # prepare() {
