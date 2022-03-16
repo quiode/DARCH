@@ -1,0 +1,11 @@
+spotify
+spotifyd
+github-desktop-bin
+teams
+spotify-tui
+joplin-desktop
+drawio-desktop
+snowflake
+write_stylus
+zotero
+nvm
