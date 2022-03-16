@@ -39,8 +39,8 @@ rm -rf libreoffice
 
 # NVM
 cd "$HOME" || exit
-FILE=./.bashrc
-STRING=source /usr/share/nvm/init-nvm.sh
+FILE="./.bashrc"
+STRING="source /usr/share/nvm/init-nvm.sh"
 if [ -z "$(grep "$STRING" "$FILE")" ]; then
     echo 'source /usr/share/nvm/init-nvm.sh' >>~/.bashrc
 fi
