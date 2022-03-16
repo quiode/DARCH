@@ -21,7 +21,7 @@ install=
 changelog=
 source=("yay.txt")
 noextract=()
-sha512sums=("dd64639ae6c45f9cb6fe0b6b3707fac8efa1ca44108bcf345e1c7588d05aae6a1da79b02ca42f1623fb77ce929979ab3a7d7700662c261df125ee5e72d711b9b")
+sha512sums=("2f2c69f9ba8d3a14281376973cced31b771c2b2f6274aec5d2c839e2b229ddeb6f28a4af8ee39e09a5a6d7cd7cc58db15f062572dd212fb32ef96e3d8c52a685")
 validpgpkeys=()
 
 # prepare() {
@@ -42,7 +42,7 @@ check() {
 	fi
 }
 
-package() {
+pack1age() {
 	# Installs aur packages
 	xargs -a yay.txt yay -S --noconfirm
 

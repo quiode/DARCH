@@ -4,7 +4,6 @@ github-desktop-bin
 teams
 spotify-tui
 drawio-desktop-bin
-joplin-desktop
 snowflake
 write_stylus
 zotero
