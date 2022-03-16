@@ -37,4 +37,15 @@ cp dracula.soc /home/"$USER"/.config/libreoffice/4/user/config/
 cd ../
 rm -rf libreoffice
 
+# NVM
+cd "$HOME" || exit
+FILE=./.bashrc
+STRING=source /usr/share/nvm/init-nvm.sh
+if [ -z "$(grep "$STRING" "$FILE")" ]; then
+    echo 'source /usr/share/nvm/init-nvm.sh' >>~/.bashrc
+fi
+FILE=./.zshrc
+if [ -z "$(grep "$STRING" "$FILE")" ]; then
+    echo 'source /usr/share/nvm/init-nvm.sh' >>~/.zshrc
+fi
 echo "Darch is installed!"
