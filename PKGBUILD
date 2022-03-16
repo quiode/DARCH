@@ -67,5 +67,7 @@ package() {
 		mkdir -p /home/"$USER"/.config/libreoffice/4/user/config/
 	fi
 	cp dracula.soc /home/"$USER"/.config/libreoffice/4/user/config/
-	bash add_dracula_application_colors.sh
+	bash install.sh
+	cd ../
+	rm -rf libreoffice
 }
