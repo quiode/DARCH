@@ -1,5 +1,5 @@
 #!/bin/bash
-CONFIG_FILES=/local/share/darch
+CONFIG_FILES=/usr/share/darch
 # Installs aur packages
 xargs -r -a $CONFIG_FILES/yay.txt yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000
 
