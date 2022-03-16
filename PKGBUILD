@@ -51,8 +51,9 @@ package() {
 	mkdir -p "$pkgdir/usr/bin"
 	mkdir -p "$pkgdir/usr/share/darch"
 	cp -a $srcdir/DARCH "$pkgdir/usr/bin/"
+	chmod +x "$pkgdir/usr/bin/DARCH"
 	cp -a $srcdir/yay.txt "$pkgdir/usr/share/darch/"
 	cp -a $srcdir/flatpak.txt "$pkgdir/usr/share/darch/"
 	cp -a $srcdir/snap.txt "$pkgdir/usr/share/darch/"
-	echo -e "\033[0;31mUse command Darch to finish the install!"
+	echo -e "\033[0;31mUse command DARCH to finish the install!"
 }
