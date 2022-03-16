@@ -8,7 +8,7 @@ arch=("x86_64")
 url="https://github.com/quiode/DARCH"
 license=('MIT')
 groups=()
-depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam' 'virtualbox' 'python-pip' 'signal-desktop' 'telegram-desktop' 'qbittorrent' 'converseen' 'inkscape' 'gimp' 'geogebra')
+depends=('nextcloud-client' 'code' 'github-cli' 'discord' 'thunderbird' 'lutris' 'nvidia-dkms' 'nvidia-utils' 'lib32-nvidia-utils' 'nvidia-settings' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-radeon' 'lib32-vulkan-radeon' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'lib32-mesa' 'vulkan-intel' 'lib32-vulkan-intel' 'vulkan-icd-loader' 'lib32-vulkan-icd-loader' 'steam' 'virtualbox' 'python-pip' 'signal-desktop' 'telegram-desktop' 'qbittorrent' 'converseen' 'inkscape' 'gimp' 'geogebra' 'flatpak')
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -19,9 +19,9 @@ backup=()
 options=()
 install=
 changelog=
-source=("yay.txt")
+source=("yay.txt" "flatpak.txt" "snap.txt")
 noextract=()
-sha512sums=("2f2c69f9ba8d3a14281376973cced31b771c2b2f6274aec5d2c839e2b229ddeb6f28a4af8ee39e09a5a6d7cd7cc58db15f062572dd212fb32ef96e3d8c52a685")
+sha512sums=("SKIP" "SKIP" "SKIP")
 validpgpkeys=()
 
 # prepare() {
@@ -40,11 +40,21 @@ check() {
 		echo "yay could not be found"
 		exit
 	fi
+	if ! command -v snap &>/dev/null; then
+		echo "snap could not be found"
+		exit
+	fi
 }
 
 pack1age() {
 	# Installs aur packages
 	xargs -a yay.txt yay -S --noconfirm
+
+	# Installs flatpak packages
+	xargs -a yay.txt flatpak install -y
+
+	# Installs snap packages
+	xargs -a yay.txt snap install -y
 
 	# Teams fix (https://aur.archlinux.org/packages/teams)
 	mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/applications"
