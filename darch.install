@@ -1,0 +1,10 @@
+pre_install() {
+    xargs -r -a yay.txt yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000
+}
+# post_install(){}
+pre_upgrade() {
+    pre_install
+}
+# post_upgrade(){}
+# pre_remove(){}
+# post_remove(){}
