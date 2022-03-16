@@ -53,11 +53,11 @@ package() {
 	# add flatpak remote
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-	# Installs flatpak packages
-	xargs -a flatpak.txt flatpak install -y
+	# # Installs flatpak packages
+	# xargs -a flatpak.txt flatpak install -y
 
 	# Installs snap packages
-	xargs -a snap.txt snap install
+	# xargs -a snap.txt snap install
 
 	# Teams fix (https://aur.archlinux.org/packages/teams)
 	mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/applications"
@@ -80,7 +80,7 @@ package() {
 		mkdir -p /home/"$USER"/.config/libreoffice/4/user/config/
 	fi
 	cp dracula.soc /home/"$USER"/.config/libreoffice/4/user/config/
-	bash install.sh
+	# bash install.sh
 	cd ../
 	rm -rf libreoffice
 }
