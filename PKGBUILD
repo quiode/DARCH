@@ -48,7 +48,7 @@ check() {
 
 package() {
 	# Installs aur packages
-	xargs -r -a yay.txt yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000
+	xargs -r -a yay.txt yay -S -y --noconfirm --batchinstall --nouseask --noprovides --noremovemake --nodiffmenu --nocleanmenu --noeditmenu --noupgrademenu --requestsplitn 1000 spotify spotifyd github-desktop-bin teams spotify-tui joplin-desktop drawio-desktop snowflake write_stylus zotero
 
 	# add flatpak remote
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
