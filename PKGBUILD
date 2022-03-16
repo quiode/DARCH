@@ -19,7 +19,7 @@ backup=()
 options=()
 install=
 changelog=
-source=()
+source=("packages/yay.txt")
 noextract=()
 sha512sums=()
 validpgpkeys=()
@@ -35,11 +35,14 @@ validpgpkeys=()
 # 	make
 # }
 
-# check() {
-# 	cd "$pkgname-$pkgver"
-# 	make -k check
-# }
+check() {
+	if ! command -v yay &>/dev/null; then
+		echo "yay could not be found"
+		exit
+	fi
+}
 
 package() {
-	echo hi
+	cd "$srcdir" || exit
+	xargs -a yay.txt yay -S --noconfirm
 }
