@@ -1,6 +1,6 @@
 spotify
 spotifyd
-github-desktop-bin
+github-desktop
 teams
 spotify-tui
 joplin-desktop

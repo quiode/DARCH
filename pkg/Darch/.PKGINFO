@@ -2,10 +2,10 @@
 # using fakeroot version 1.28
 pkgname = Darch
 pkgbase = Darch
-pkgver = 1.0.3-1
+pkgver = 1.0.4-1
 pkgdesc = Configuration files, scripts and packages for Darch
 url = https://github.com/quiode/DARCH
-builddate = 1647503190
+builddate = 1647509432
 packager = Unknown Packager
 size = 0
 arch = x86_64
