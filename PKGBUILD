@@ -19,9 +19,9 @@ backup=()
 options=()
 install=
 changelog=
-source=("yay.txt" "flatpak.txt" "snap.txt" "DARCH")
+source=("yay.txt" "flatpak.txt" "snap.txt" "DARCH" ".xprofile")
 noextract=()
-sha512sums=("SKIP" "SKIP" "SKIP" "SKIP")
+sha512sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
 validpgpkeys=()
 
 # prepare() {
@@ -50,10 +50,13 @@ package() {
 	cd $srcdir
 	mkdir -p "$pkgdir/usr/bin"
 	mkdir -p "$pkgdir/usr/share/darch"
-	cp -a $srcdir/DARCH "$pkgdir/usr/bin/"
+	cp -a "$srcdir/DARCH" "$pkgdir/usr/bin/"
 	chmod +x "$pkgdir/usr/bin/DARCH"
-	cp -a $srcdir/yay.txt "$pkgdir/usr/share/darch/"
-	cp -a $srcdir/flatpak.txt "$pkgdir/usr/share/darch/"
-	cp -a $srcdir/snap.txt "$pkgdir/usr/share/darch/"
+	cp -a "$srcdir/yay.txt" "$pkgdir/usr/share/darch/"
+	cp -a "$srcdir/flatpak.txt" "$pkgdir/usr/share/darch/"
+	cp -a "$srcdir/snap.txt" "$pkgdir/usr/share/darch/"
 	echo -e "\033[0;31mUse command DARCH to finish the install!"
+
+	mkdir -p "$pkgdir/etc"
+	cp -a "$srcdir/xprofile" "$pkgdir/etc/"
 }
