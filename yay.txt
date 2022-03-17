@@ -9,4 +9,4 @@ snowflake
 write_stylus
 zotero
 nvm
-
+visual-studio-code-bin
