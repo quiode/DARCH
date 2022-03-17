@@ -18,6 +18,8 @@ This repository is meant to easily setup a new computer with my personal setting
 ```bash
 yay
 yay -S snapd
+sudo systemctl enable snapd
+sudo systemctl start snapd
 *restart*
 git clone https://github.com/quiode/DARCH
 cd DARCH
