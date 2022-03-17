@@ -1,6 +1,6 @@
 # Maintainer: Dominik Schwaiger <domi.schwaiger04@gmail.com>
 pkgname=Darch
-pkgver=1.0.7
+pkgver=1.0.8
 pkgrel=1
 epoch=0
 pkgdesc="Configuration files, scripts and packages for Darch"
