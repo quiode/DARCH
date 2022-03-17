@@ -10,3 +10,8 @@ write_stylus
 zotero
 nvm
 visual-studio-code-bin
+ncmpcpp
+mopidy
+mopidy-spotify
+mopidy-local
+mopidy-mpd
