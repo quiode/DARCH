@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIG_FILES=/usr/share/darch
 # Installs aur packages
-xargs -r -a $CONFIG_FILES/yay.txt yay -S 
+xargs -r -a $CONFIG_FILES/yay.txt yay --noredownload --norebuild -S
 
 # add flatpak remote
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -42,10 +42,37 @@ cd "$HOME" || exit
 FILE="./.bashrc"
 STRING="source /usr/share/nvm/init-nvm.sh"
 if [ -z "$(grep "$STRING" "$FILE")" ]; then
-    echo 'source /usr/share/nvm/init-nvm.sh' >>~/.bashrc
+    echo "$STRING" >>$FILE
 fi
 FILE=./.zshrc
 if [ -z "$(grep "$STRING" "$FILE")" ]; then
-    echo 'source /usr/share/nvm/init-nvm.sh' >>~/.zshrc
+    echo "$STRING" >>$FILE
 fi
+
+# ncmpcpp spotify
+cp --force "$CONFIG_FILES/config" "$HOME/.ncmpcpp/"
+sudo chmod 777 "$HOME/.ncmpcpp/config"
+
+FILE="/etc/mopidy/mopidy.conf"
+STRING="client_secret"
+isInFile=$(cat $FILE | grep -c "$STRING")
+if [ $isInFile -eq 0 ]; then
+    sudo cp --force "$CONFIG_FILES/mopidy.conf" "/etc/mopidy/"
+    sudo chmod 777 "/etc/mopidy/mopidy.conf"
+fi
+
+FILE="/etc/pulse/default.pa"
+STRING="load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1"
+if [ -z "$(grep "$STRING" "$FILE")" ]; then
+    echo "$STRING" | sudo tee -a $FILE
+fi
+
+if command -v mpd &>/dev/null; then
+    pkill mpd
+    yay -R mpd
+fi
+pulseaudio --kill
+start-pulseaudio-x11
+sudo systemctl restart mopidy
+
 echo "Darch is installed!"
