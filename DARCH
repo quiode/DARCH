@@ -69,7 +69,7 @@ fi
 
 if command -v mpd &>/dev/null; then
     pkill mpd
-    yay -R mpd
+    sudo systemctl disable mpd
 fi
 pulseaudio --kill
 start-pulseaudio-x11
