@@ -5,7 +5,7 @@ teams
 spotify-tui
 joplin-desktop-bin
 drawio-desktop
-snowflake
+muon-ssh2
 write_stylus
 zotero
 nvm
