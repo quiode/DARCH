@@ -1,7 +1,5 @@
 #!/bin/bash
 CONFIG_FILES=/usr/share/darch
-# Installs aur packages
-xargs -r -a $CONFIG_FILES/yay.txt yay --noredownload --norebuild -S
 
 # add flatpak remote
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
