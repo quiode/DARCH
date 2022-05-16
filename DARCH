@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "$EUID" -eq 0 ]; then
+    echo "Please run as root"
+    exit
+fi
+
 CONFIG_FILES=/usr/share/darch
 
 # add flatpak remote
@@ -104,5 +109,9 @@ fi
 pulseaudio --kill
 start-pulseaudio-x11
 sudo systemctl restart mopidy
+
+# Docker (add user to docker group)
+sudo groupadd docker
+sudo usermod -aG docker "$USER"
 
 echo "Darch is installed!"
